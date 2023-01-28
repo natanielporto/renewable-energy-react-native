@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import { Button } from "./src/components/Atoms/Button/Button";
+import { View, Text, SafeAreaView } from "react-native";
+import { Input } from "./src/components/Atoms/Input/Input";
 
 import {
   useFonts,
@@ -12,6 +12,7 @@ import {
   Sora_700Bold,
   Sora_800ExtraBold,
 } from "@expo-google-fonts/sora";
+import { Label } from "./src/components/Atoms/Label/Label";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -27,17 +28,26 @@ export default function App() {
 
   if (!fontsLoaded)
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View>
         <Text>Loading...</Text>
       </View>
     );
 
   return (
-    <View>
-      <Text>No Storybook, dummy test of components under.</Text>
-      <Button action="Test 1" background="primary" />
-      <Button action="Test 2" background="primary" bordered />
-      <Button action="Test 3" background="secondary" />
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text style={{ marginBottom: "10%" }}>
+          No Storybook, dummy test of components under.
+        </Text>
+        <View>
+          <Label label="Email" />
+          <Input placeholder="email" />
+        </View>
+        <View>
+          <Label label="Password" />
+          <Input placeholder="email" type="password" />
+        </View>
+      </View>
+    </SafeAreaView>
   );
 }
