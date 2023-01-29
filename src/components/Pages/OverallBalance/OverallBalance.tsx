@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Banner } from "../../Molecules/Banner/Banner";
+import { Chart } from "../../Atoms/Chart/Chart";
 
 export const OverallBalance = () => {
   return (
     <View>
       <Text>Overall ballance</Text>
-      <Banner />
+      <Chart fund="naturalGas" />
     </View>
   );
 };

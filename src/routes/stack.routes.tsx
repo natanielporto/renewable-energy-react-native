@@ -5,6 +5,8 @@ import { SignUp } from "../components/Pages/SignUp/SignUp";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { OverallBalance } from "../components/Pages/OverallBalance/OverallBalance";
+import { Button, TouchableOpacity, View, Text } from "react-native";
+import { colors } from "../global/colors";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -39,8 +41,23 @@ export function StackRoutes() {
         name="overallBalance"
         component={OverallBalance}
         options={{
-          title: "",
-          headerLeft: () => <AntDesign name="user" size={24} color="black" />,
+          title: `Account: $${0}`,
+          headerLeft: () => (
+            <View
+              style={{
+                width: 32,
+                height: 32,
+                backgroundColor: colors.gray100,
+                borderRadius: 50,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <AntDesign name="user" size={24} color="black" />
+            </View>
+          ),
+          headerRight: () => <AntDesign name="bells" size={24} color="black" />,
         }}
       />
     </Navigator>
