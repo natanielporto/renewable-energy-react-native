@@ -4,6 +4,8 @@ import { Login } from "../components/Pages/Login/Login";
 import { SignUp } from "../components/Pages/SignUp/SignUp";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { OverallBalance } from "../components/Pages/OverallBalance/OverallBalance";
+
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
@@ -31,6 +33,14 @@ export function StackRoutes() {
               onPress={() => navigation.goBack()}
             />
           ),
+        }}
+      />
+      <Screen
+        name="overallBalance"
+        component={OverallBalance}
+        options={{
+          title: "",
+          headerLeft: () => <AntDesign name="user" size={24} color="black" />,
         }}
       />
     </Navigator>

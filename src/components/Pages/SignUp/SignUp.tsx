@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { colors } from "../../../global/colors";
@@ -8,6 +9,12 @@ import { Disclaimer } from "../../Molecules/Disclaimer/Disclaimer";
 import { SignUpInputFields } from "../../Organisms/SignUpInputFields/SignUpInputFields";
 
 export const SignUp = () => {
+  const navigation = useNavigation();
+
+  function openScreen() {
+    navigation.navigate("overallBalance");
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.componentContainer}>
@@ -19,7 +26,9 @@ export const SignUp = () => {
 
         <Disclaimer>
           <SimpleString>
-            <Text style={{ marginLeft: 5, color: colors.gray700 }}>
+            <Text
+              style={{ marginLeft: 5, marginBottom: 32, color: colors.gray700 }}
+            >
               I am over 18 years of age and I have read and agree to the&nbsp;
               <Text style={{ color: colors.black }}>Terms of Service</Text>{" "}
               and&nbsp;
@@ -28,7 +37,7 @@ export const SignUp = () => {
           </SimpleString>
         </Disclaimer>
 
-        <Button action="Create account" onPress={() => null} />
+        <Button action="Create account" onPress={openScreen} />
 
         <View style={styles.stringView}>
           <SimpleString justify="center">
@@ -43,8 +52,8 @@ export const SignUp = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 20,
-    marginRight: 20,
+    backgroundColor: colors.white,
+    height: "100%",
   },
   componentContainer: {
     marginLeft: 20,
@@ -55,7 +64,7 @@ const styles = StyleSheet.create({
     marginBottom: 34,
   },
   stringView: {
-    marginTop: 13,
+    marginTop: 19,
     display: "flex",
     justifyContent: "center",
   },
