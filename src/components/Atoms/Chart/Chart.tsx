@@ -27,5 +27,3 @@ export const Chart: React.FC<ChartProps> = ({ fund, profit }) => {
     </View>
   );
 };
-
-// 45:35
