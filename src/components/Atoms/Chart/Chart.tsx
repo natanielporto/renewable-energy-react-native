@@ -11,16 +11,16 @@ interface ChartProps {
 
 export const Chart: React.FC<ChartProps> = ({ fund, profit }) => {
   return (
-    <View>
+    <View style={{ width: 60, height: 48 }}>
       <VictoryArea
+        height={48}
+        width={60}
         interpolation="natural"
         data={INTERESTS[fund]}
         style={{
           data: {
             fill: "transparent",
-            fillOpacity: 0.7,
             stroke: profit ? colors.secondary : colors.danger,
-            strokeWidth: 3,
           },
         }}
       />
