@@ -1,4 +1,5 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text } from "react-native";
+import { Routes } from "./src/routes";
 
 import {
   useFonts,
@@ -31,13 +32,5 @@ export default function App() {
       </View>
     );
 
-  return (
-    <SafeAreaView>
-      <View>
-        <Text style={{ marginBottom: "10%" }}>
-          No Storybook, dummy test of components under.
-        </Text>
-      </View>
-    </SafeAreaView>
-  );
+  return <Routes />;
 }
