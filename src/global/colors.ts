@@ -13,4 +13,5 @@ export const colors = {
   textDark: "#000",
 
   grayBackground: "#f4f4f4",
+  grayBackground100: "#F5F5F5",
 };

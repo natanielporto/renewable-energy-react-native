@@ -16,5 +16,5 @@ export const Input = styled.TextInput`
 export const Icon = styled.TouchableOpacity`
   position: absolute;
   top: 15px;
-  right: 30px;
+  right: 10px;
 `;
