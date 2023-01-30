@@ -8,7 +8,7 @@ export const StringContainer = styled.View<{
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.02em;
-  color: ${({ color }) => color || colors.gray700};
+  color: ${({ color }) => color || colors.grey700};
   display: flex;
   flex-direction: row;
   justify-content: ${({ justify }) => justify};

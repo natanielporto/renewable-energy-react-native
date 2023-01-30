@@ -8,14 +8,14 @@ export const colors = {
   yellow: "#F0A719",
   blue: "#4A88D0",
 
-  gray100: "#F4F4F4",
-  gray300: "#e6e6e6",
-  gray500: "#CFCFCF",
-  gray700: "#a0a0a0",
+  grey100: "#F4F4F4",
+  grey300: "#e6e6e6",
+  grey500: "#CFCFCF",
+  grey700: "#a0a0a0",
 
   textLight: "#fff",
   textDark: "#000",
 
-  grayBackground: "#f4f4f4",
-  grayBackground100: "#F5F5F5",
+  greyBackground: "#f4f4f4",
+  greyBackground100: "#F5F5F5",
 };

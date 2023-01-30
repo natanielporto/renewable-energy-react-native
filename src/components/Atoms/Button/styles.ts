@@ -6,7 +6,7 @@ interface ButtonCSSProps {
   bordered?: boolean;
 }
 
-const { primary, secondary, white, gray500 } = colors;
+const { primary, secondary, white, grey500 } = colors;
 
 export const Container = styled.TouchableOpacity<ButtonCSSProps>`
   display: flex;
@@ -22,7 +22,7 @@ export const Container = styled.TouchableOpacity<ButtonCSSProps>`
   ${({ background, bordered }) =>
     background === "primary" &&
     bordered &&
-    `background: ${white}, color: ${primary}, border-color: ${gray500}`};
+    `background: ${white}, color: ${primary}, border-color: ${grey500}`};
 `;
 
 export const Action = styled.Text<{ bordered: boolean }>`

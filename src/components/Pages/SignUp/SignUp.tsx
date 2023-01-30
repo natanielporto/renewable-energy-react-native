@@ -27,7 +27,7 @@ export const SignUp = () => {
         <Disclaimer>
           <SimpleString>
             <Text
-              style={{ marginLeft: 5, marginBottom: 32, color: colors.gray700 }}
+              style={{ marginLeft: 5, marginBottom: 32, color: colors.grey700 }}
             >
               I am over 18 years of age and I have read and agree to the&nbsp;
               <Text style={{ color: colors.black }}>Terms of Service</Text>{" "}
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
   },
-  textA: { marginRight: 5, color: colors.gray700 },
+  textA: { marginRight: 5, color: colors.grey700 },
   textB: {
     textDecorationLine: "underline",
     marginRight: 5,

@@ -47,7 +47,7 @@ export function StackRoutes() {
               style={{
                 width: 32,
                 height: 32,
-                backgroundColor: colors.gray100,
+                backgroundColor: colors.grey100,
                 borderRadius: 50,
                 display: "flex",
                 justifyContent: "center",

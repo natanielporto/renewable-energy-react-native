@@ -7,7 +7,7 @@ export const Container = styled.View`
 
 export const Input = styled.TextInput`
   height: 48px;
-  background-color: ${colors.grayBackground};
+  background-color: ${colors.greyBackground};
   border-radius: 4px;
   padding-left: 10px;
   margin-bottom: 39px;

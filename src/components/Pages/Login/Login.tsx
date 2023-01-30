@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
   },
-  textA: { marginRight: 5, color: colors.gray700 },
+  textA: { marginRight: 5, color: colors.grey700 },
   textB: {
     textDecorationLine: "underline",
     marginRight: 5,
-    color: colors.gray700,
+    color: colors.grey700,
   },
 });

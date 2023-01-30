@@ -18,14 +18,14 @@ export const Input: React.FC<InputProps> = ({ placeholder, type }) => {
         placeholder={placeholder}
         secureTextEntry={type === "password" && hidePassword}
         keyboardType={Boolean(type === "email") ? "email-address" : undefined}
-        placeholderTextColor={colors.gray500}
+        placeholderTextColor={colors.grey500}
       />
       {type === "password" && (
         <S.Icon onPress={handleHidePassword}>
           {hidePassword ? (
-            <Feather name="eye" size={18} color={colors.gray700} />
+            <Feather name="eye" size={18} color={colors.grey700} />
           ) : (
-            <Feather name="eye-off" size={18} color={colors.gray700} />
+            <Feather name="eye-off" size={18} color={colors.grey700} />
           )}
         </S.Icon>
       )}
