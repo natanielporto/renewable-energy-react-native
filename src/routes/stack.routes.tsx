@@ -4,8 +4,6 @@ import { Login } from "../components/Pages/Login/Login";
 import { SignUp } from "../components/Pages/SignUp/SignUp";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { View } from "react-native";
-import { colors } from "../global/colors";
 import { TabRoutes } from "./tab.routes";
 
 const { Screen, Navigator } = createNativeStackNavigator();
@@ -43,25 +41,6 @@ export function StackRoutes() {
         options={{
           headerShown: false,
         }}
-        // options={{
-        //   title: `Account: $${0}`,
-        //   headerLeft: () => (
-        //     <View
-        //       style={{
-        //         width: 32,
-        //         height: 32,
-        //         backgroundColor: colors.grey100,
-        //         borderRadius: 50,
-        //         display: "flex",
-        //         justifyContent: "center",
-        //         alignItems: "center",
-        //       }}
-        //     >
-        //       <AntDesign name="user" size={24} color="black" />
-        //     </View>
-        //   ),
-        //   headerRight: () => <AntDesign name="bells" size={24} color="black" />,
-        // }}
       />
     </Navigator>
   );

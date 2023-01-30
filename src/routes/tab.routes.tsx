@@ -8,6 +8,7 @@ import { colors } from "../global/colors";
 import { Trade } from "../components/Pages/Trade/Trade";
 import { Portfolio } from "../components/Pages/Portfolio/Portfolio";
 import { View } from "react-native";
+import { HeaderValue } from "../components/Molecules/HeaderValue/HeaderValue";
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -48,6 +49,8 @@ export function TabRoutes() {
               style={{ marginRight: 20 }}
             />
           ),
+          headerTitle: () => <HeaderValue value="1.457,23" />,
+          headerStyle: { elevation: 0, shadowOpacity: 0, borderBottomWidth: 0 },
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
             <Entypo name="home" size={24} color={color} />
