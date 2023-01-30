@@ -16,5 +16,5 @@ export const colors = {
   grey700: "#a0a0a0",
 
   greyBackground: "#f4f4f4",
-  greyBackground100: "#F5F5F5",
+  greyBackground100: "#FFFFF9", // to add visibility to the blank cards
 };

@@ -5,7 +5,6 @@ import { TabRoutes } from "./tab.routes";
 
 export const Routes = () => (
   <NavigationContainer>
-    {/* <StackRoutes /> */}
-    <TabRoutes />
+    <StackRoutes />
   </NavigationContainer>
 );

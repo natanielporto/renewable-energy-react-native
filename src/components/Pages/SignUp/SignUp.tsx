@@ -12,7 +12,7 @@ export const SignUp = () => {
   const navigation = useNavigation();
 
   function openScreen() {
-    navigation.navigate("overallBalance");
+    navigation.navigate("home");
   }
 
   return (

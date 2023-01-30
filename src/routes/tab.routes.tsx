@@ -1,19 +1,17 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Login } from "../components/Pages/Login/Login";
-import { SignUp } from "../components/Pages/SignUp/SignUp";
-import { useNavigation } from "@react-navigation/native";
-import { OverallBalance } from "../components/Pages/OverallBalance/OverallBalance";
-import { Entypo } from "@expo/vector-icons";
+import { Home } from "../components/Pages/Home/Home";
+import { AntDesign, Entypo } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { colors } from "../global/colors";
+import { Trade } from "../components/Pages/Trade/Trade";
+import { Portfolio } from "../components/Pages/Portfolio/Portfolio";
+import { View } from "react-native";
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
 export function TabRoutes() {
-  const navigation = useNavigation();
-
   return (
     <Navigator
       screenOptions={{
@@ -22,9 +20,34 @@ export function TabRoutes() {
       }}
     >
       <Screen
-        name="home"
-        component={Login}
+        name="homepage"
+        component={Home}
         options={{
+          title: `Account: $${0}`,
+          headerLeft: () => (
+            <View
+              style={{
+                width: 32,
+                height: 32,
+                marginLeft: 20,
+                backgroundColor: colors.grey100,
+                borderRadius: 50,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <AntDesign name="user" size={24} color="black" />
+            </View>
+          ),
+          headerRight: () => (
+            <AntDesign
+              name="bells"
+              size={24}
+              color="black"
+              style={{ marginRight: 20 }}
+            />
+          ),
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
             <Entypo name="home" size={24} color={color} />
@@ -33,8 +56,9 @@ export function TabRoutes() {
       />
       <Screen
         name="trade"
-        component={SignUp}
+        component={Trade}
         options={{
+          title: "",
           tabBarLabel: "Trade",
           tabBarIcon: ({ color }) => (
             <Octicons name="arrow-switch" size={24} color={color} />
@@ -43,8 +67,9 @@ export function TabRoutes() {
       />
       <Screen
         name="portfolio"
-        component={OverallBalance}
+        component={Portfolio}
         options={{
+          title: "",
           tabBarLabel: "Portfolio",
           tabBarIcon: ({ color }) => (
             <Feather name="pie-chart" size={24} color={color} />

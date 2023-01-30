@@ -4,7 +4,7 @@ import { colors } from "../../../global/colors";
 export const Container = styled.View`
   width: 159px;
   height: 215px;
-  background: ${colors.grey100};
+  background: ${colors.greyBackground};
   border-radius: 10px;
   padding-top: 21px;
   padding-left: 12px;

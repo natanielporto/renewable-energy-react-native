@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Text, View, StyleSheet } from "react-native";
 import { colors } from "../../../global/colors";
 
-interface CardHeaderProps {
+export interface CardHeaderProps {
   fund: "wind" | "solar" | "naturalGas";
 }
 
@@ -25,7 +25,7 @@ export const CardHeader: React.FC<CardHeaderProps> = ({ fund }) => {
       ),
       title: "Wind fund",
     },
-    nature: {
+    naturalGas: {
       icon: <Ionicons name="leaf-outline" size={13} color={colors.secondary} />,
       title: "Natural gas fund",
     },

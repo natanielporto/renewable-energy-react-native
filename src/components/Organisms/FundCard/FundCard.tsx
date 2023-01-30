@@ -6,14 +6,26 @@ import { Value } from "../../Atoms/Value/Value";
 import { CardHeader } from "../../Molecules/CardHeader/CardHeader";
 import { Percentage } from "../../Molecules/Percentage/Percentage";
 
-export const FundCard = () => {
+interface FundCardProps {
+  profit?: boolean;
+  fund: "wind" | "solar" | "naturalGas";
+  value: number;
+  percentage: number;
+}
+
+export const FundCard: React.FC<FundCardProps> = ({
+  fund,
+  profit,
+  value,
+  percentage,
+}) => {
   return (
     <View style={styles.container}>
-      <CardHeader fund="wind" />
-      <Chart fund="wind" profit />
+      <CardHeader fund={fund} />
+      <Chart fund={fund} profit={profit} />
       <View style={styles.footer}>
-        <Value amount={1032.23} />
-        <Percentage amount={3.51} profit />
+        <Value amount={value} />
+        <Percentage amount={percentage} profit={profit} />
       </View>
     </View>
   );
@@ -28,6 +40,8 @@ const styles = StyleSheet.create({
     borderColor: colors.grey300,
     padding: 12,
     marginRight: 15,
+    maxHeight: 155,
+    width: 150,
   },
   footer: {
     display: "flex",

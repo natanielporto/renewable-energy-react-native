@@ -11,6 +11,7 @@ export const Container = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin: 20px 0;
 `;
 
 export const TopText = styled.Text`
