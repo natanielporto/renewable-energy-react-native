@@ -29,7 +29,7 @@ export const FundCard: React.FC<FundCardProps> = ({
   return (
     <TouchableOpacity style={styles.container} onPress={openScreen}>
       <CardHeader fund={fund} />
-      <Chart fund={fund} profit={profit} />
+      <Chart fund={fund} profit={profit} fineDetail={false} />
       <View style={styles.footer}>
         <Value amount={value} />
         <Percentage amount={percentage} profit={profit} />

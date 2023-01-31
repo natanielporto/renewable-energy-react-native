@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, ScrollView } from "react-native";
+import { fakeCardList } from "../../../utils/fakeBreakdownCardList";
 import { InfoAndStats } from "../../../utils/fakeInfoAndStats";
 import { Chart } from "../../Atoms/Chart/Chart";
 import { GraphBottomSelector } from "../../Atoms/GraphBottomSelector/GraphBottomSelector";
 import { IndividualFundHeader } from "../../Molecules/IndividualFundHeader/IndividualFundHeader";
+import { FundBreakdownCardList } from "../../Organisms/FundBreakdownCardList/FundBreakdownCardList";
 import { InfoAndStatsTable } from "../../Organisms/InfoAndStatsTable/InfoAndStatsTable";
 
 export const Trade = () => {
@@ -11,25 +13,31 @@ export const Trade = () => {
 
   return (
     <View>
-      <IndividualFundHeader
-        amount={3.51}
-        value={18.23}
-        year={2022}
-        currencyValue={1.21}
-        profit
-      />
+      <ScrollView nestedScrollEnabled={true}>
+        <View>
+          <IndividualFundHeader
+            amount={3.51}
+            value={18.23}
+            year={2022}
+            currencyValue={1.21}
+            profit
+          />
 
-      <Chart
-        fund="wind"
-        profit
-        width={windowWidth.width}
-        height={200}
-        fineDetail
-      />
+          <Chart
+            fund="wind"
+            profit
+            width={windowWidth.width}
+            height={200}
+            fineDetail
+          />
 
-      <GraphBottomSelector />
+          <GraphBottomSelector />
 
-      <InfoAndStatsTable data={InfoAndStats} />
+          <InfoAndStatsTable data={InfoAndStats} />
+
+          <FundBreakdownCardList data={fakeCardList} />
+        </View>
+      </ScrollView>
     </View>
   );
 };

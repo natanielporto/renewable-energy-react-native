@@ -41,39 +41,41 @@ export const Home = () => {
 
   return (
     <View style={{ backgroundColor: colors.greyBackground100, height: "100%" }}>
-      <HomeHeaderInfo value="1,245.21" amount="31.82" profit />
-      <View style={{ marginLeft: 20, marginTop: 20 }}>
-        <Text
-          style={{
-            marginBottom: 20,
-            fontSize: 18,
-            lineHeight: 23,
-            fontWeight: "600",
-          }}
-        >
-          Funds
-        </Text>
-        <FlatList
-          data={data}
-          renderItem={renderCategoryItem}
-          keyExtractor={(card) => card.fund}
-          showsHorizontalScrollIndicator={false}
-          horizontal
-        />
-      </View>
-      <View style={{ marginHorizontal: 20 }}>
-        <Banner />
-        <ScrollView
-          horizontal
-          contentContainerStyle={{
-            width: "100%",
-            justifyContent: "space-between",
-          }}
-        >
-          <BlankCard title="Why should you invest here?" />
-          <BlankCard title="" />
-        </ScrollView>
-      </View>
+      <ScrollView nestedScrollEnabled={true}>
+        <HomeHeaderInfo value="1,245.21" amount="31.82" profit />
+        <View style={{ marginLeft: 20, marginTop: 20 }}>
+          <Text
+            style={{
+              marginBottom: 20,
+              fontSize: 18,
+              lineHeight: 23,
+              fontWeight: "600",
+            }}
+          >
+            Funds
+          </Text>
+          <FlatList
+            data={data}
+            renderItem={renderCategoryItem}
+            keyExtractor={(card) => card.fund}
+            showsHorizontalScrollIndicator={false}
+            horizontal
+          />
+        </View>
+        <View style={{ marginHorizontal: 20 }}>
+          <Banner />
+          <ScrollView
+            horizontal
+            contentContainerStyle={{
+              width: "100%",
+              justifyContent: "space-between",
+            }}
+          >
+            <BlankCard title="Why should you invest here?" />
+            <BlankCard title="" />
+          </ScrollView>
+        </View>
+      </ScrollView>
     </View>
   );
 };
