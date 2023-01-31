@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, Dimensions } from "react-native";
+import { View, Dimensions } from "react-native";
+import { InfoAndStats } from "../../../utils/fakeInfoAndStats";
 import { Chart } from "../../Atoms/Chart/Chart";
 import { GraphBottomSelector } from "../../Atoms/GraphBottomSelector/GraphBottomSelector";
-import { PageTitle } from "../../Atoms/PageTitle/PageTitle";
 import { IndividualFundHeader } from "../../Molecules/IndividualFundHeader/IndividualFundHeader";
+import { InfoAndStatsTable } from "../../Organisms/InfoAndStatsTable/InfoAndStatsTable";
 
 export const Trade = () => {
   const windowWidth = Dimensions.get("window");
@@ -27,6 +28,8 @@ export const Trade = () => {
       />
 
       <GraphBottomSelector />
+
+      <InfoAndStatsTable data={InfoAndStats} />
     </View>
   );
 };
