@@ -3,9 +3,9 @@ import { Text, View, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { colors } from "../../../global/colors";
 
-interface PercentageProps {
+export interface PercentageProps {
   profit?: boolean;
-  amount: number;
+  amount: number | string;
 }
 
 export const Percentage: React.FC<PercentageProps> = ({ profit, amount }) => {
