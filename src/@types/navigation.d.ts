@@ -6,6 +6,7 @@ export declare global {
       home: undefined;
       portfolio: undefined;
       trade: undefined;
+      fundDetails: undefined;
     }
   }
 }

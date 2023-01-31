@@ -1,11 +1,20 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { PageTitle } from "../../Atoms/PageTitle/PageTitle";
+import { IndividualFundHeader } from "../../Molecules/IndividualFundHeader/IndividualFundHeader";
 
 export const Trade = () => {
   return (
     <View>
+      <IndividualFundHeader
+        amount={3.51}
+        value={18.23}
+        year={2022}
+        currencyValue={1.21}
+        profit
+      />
       <PageTitle title="Trade" />
+
       <Text>
         Bacon ipsum dolor amet tail meatloaf ribeye prosciutto, short loin
         andouille pastrami porchetta burgdoggen. Cupim spare ribs chicken,

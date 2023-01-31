@@ -9,10 +9,17 @@ import { Trade } from "../components/Pages/Trade/Trade";
 import { Portfolio } from "../components/Pages/Portfolio/Portfolio";
 import { View } from "react-native";
 import { HeaderValue } from "../components/Molecules/HeaderValue/HeaderValue";
+import { useNavigation } from "@react-navigation/native";
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
 export function TabRoutes() {
+  const navigation = useNavigation();
+
+  function homeScreen() {
+    navigation.navigate("home");
+  }
+
   return (
     <Navigator
       screenOptions={{
@@ -61,8 +68,17 @@ export function TabRoutes() {
         name="trade"
         component={Trade}
         options={{
-          title: "",
+          title: "Wind trade",
           tabBarLabel: "Trade",
+          headerLeft: () => (
+            <AntDesign
+              name="arrowleft"
+              size={18}
+              color="black"
+              style={{ marginLeft: 15 }}
+              onPress={homeScreen}
+            />
+          ),
           tabBarIcon: ({ color }) => (
             <Octicons name="arrow-switch" size={24} color={color} />
           ),

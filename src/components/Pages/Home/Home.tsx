@@ -11,7 +11,7 @@ import { Banner } from "../../Molecules/Banner/Banner";
 import { BlankCard } from "../../Molecules/BlankCard/BlankCard";
 import { CardHeaderProps } from "../../Molecules/CardHeader/CardHeader";
 import { FundCard } from "../../Organisms/FundCard/FundCard";
-import { HomeHeaderInfo } from "../../Organisms/HomeHeader/HomeHeader";
+import { HomeHeaderInfo } from "../../Organisms/HomeHeaderInfo/HomeHeaderInfo";
 
 interface InterestValueProps extends CardHeaderProps {
   value: number;
@@ -41,7 +41,7 @@ export const Home = () => {
 
   return (
     <View style={{ backgroundColor: colors.greyBackground100, height: "100%" }}>
-      <HomeHeaderInfo value="1,245.21" amount="31.82%" profit />
+      <HomeHeaderInfo value="1,245.21" amount="31.82" profit />
       <View style={{ marginLeft: 20, marginTop: 20 }}>
         <Text
           style={{

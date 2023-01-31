@@ -6,14 +6,20 @@ import { colors } from "../../../global/colors";
 export interface PercentageProps {
   profit?: boolean;
   amount: number | string;
+  currencyValue?: number | string;
 }
 
-export const Percentage: React.FC<PercentageProps> = ({ profit, amount }) => {
+export const Percentage: React.FC<PercentageProps> = ({
+  profit,
+  amount,
+  currencyValue,
+}) => {
   const styles = StyleSheet.create({
     text: {
       color: profit ? colors.secondary : colors.danger,
       fontSize: 14,
       lineHeight: 18,
+      marginRight: 5,
     },
   });
 
@@ -27,6 +33,10 @@ export const Percentage: React.FC<PercentageProps> = ({ profit, amount }) => {
         )}
       </Text>
       <Text style={styles.text}>{amount}%</Text>
+
+      {currencyValue && (
+        <Text style={styles.text}>{` $(${currencyValue})`}</Text>
+      )}
     </Text>
   );
 };

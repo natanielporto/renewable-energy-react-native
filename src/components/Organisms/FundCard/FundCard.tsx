@@ -1,5 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { colors } from "../../../global/colors";
 import { Chart } from "../../Atoms/Chart/Chart";
 import { Value } from "../../Atoms/Value/Value";
@@ -19,15 +20,21 @@ export const FundCard: React.FC<FundCardProps> = ({
   value,
   percentage,
 }) => {
+  const navigation = useNavigation();
+
+  function openScreen() {
+    navigation.navigate("trade");
+  }
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={openScreen}>
       <CardHeader fund={fund} />
       <Chart fund={fund} profit={profit} />
       <View style={styles.footer}>
         <Value amount={value} />
         <Percentage amount={percentage} profit={profit} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
