@@ -1,10 +1,5 @@
 import { Text, StyleSheet } from "react-native";
 
-interface ValueProps {
-  amount: string | number;
-  style?: React.CSSProperties;
-}
-
 export const Value = ({ amount, style = {} }) => {
   const styles = StyleSheet.create({
     text: {

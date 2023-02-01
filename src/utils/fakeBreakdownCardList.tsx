@@ -14,7 +14,7 @@ export const fakeCardList = [
   {
     src: "https://picsum.photos/200",
     alt: "https://picsum.photos/200",
-    companyLogo: "AspiraDAC",
+    companyLogo: "AspiraDACB",
     text: "Aspira is building a modular, direct air capture system with the energy supply integrated into the modules.",
   },
 ];

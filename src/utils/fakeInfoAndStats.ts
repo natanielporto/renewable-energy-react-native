@@ -1,4 +1,4 @@
-export const InfoAndStats = [
+export const infoAndStats = [
   {
     header: "AUM",
     info: "$430.88m",

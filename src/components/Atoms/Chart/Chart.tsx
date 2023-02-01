@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { VictoryArea } from "victory-native";
 import { colors } from "../../../global/colors";
-import { INTERESTS } from "../../../utils/interests";
+import { interests } from "../../../utils/interests";
 
 interface ChartProps {
   fund: "wind" | "solar" | "naturalGas";
@@ -25,7 +25,7 @@ export const Chart: React.FC<ChartProps> = ({
         height={height || 48}
         width={width || 60}
         interpolation={fineDetail ? "linear" : "natural"}
-        data={INTERESTS[fund]}
+        data={interests[fund]}
         labels={fineDetail ? ({ datum }) => datum.y : undefined}
         padding={0}
         animate={{

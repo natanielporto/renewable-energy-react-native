@@ -1,4 +1,4 @@
-export const INTERESTS = {
+export const interests = {
   wind: [
     {
       x: 1,

@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Octicons } from "@expo/vector-icons";
 import { colors } from "../../../global/colors";
+
 export const Tag = () => {
   return (
     <View style={styles.container}>

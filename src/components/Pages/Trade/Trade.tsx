@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { colors } from "../../../global/colors";
 import { fakeCardList } from "../../../utils/fakeBreakdownCardList";
-import { InfoAndStats } from "../../../utils/fakeInfoAndStats";
+import { infoAndStats } from "../../../utils/fakeInfoAndStats";
 import { Button } from "../../Atoms/Button/Button";
 import { Chart } from "../../Atoms/Chart/Chart";
 import { GraphBottomSelector } from "../../Atoms/GraphBottomSelector/GraphBottomSelector";
@@ -29,7 +29,7 @@ export const Trade = () => {
   const renderGraphButtons = useMemo(
     () =>
       graphButtons.map((button, index) => (
-        <TouchableOpacity onPress={() => handleSelect(button)}>
+        <TouchableOpacity key={button} onPress={() => handleSelect(button)}>
           <GraphBottomSelector
             selector={button}
             btnSelected={graphButtons[index] === selected}
@@ -77,7 +77,7 @@ export const Trade = () => {
             {renderGraphButtons}
           </ScrollView>
 
-          <InfoAndStatsTable data={InfoAndStats} />
+          <InfoAndStatsTable data={infoAndStats} />
 
           <View style={{ marginTop: 49, marginBottom: 63.5 }}>
             <FundBreakdownCardList data={fakeCardList} />
