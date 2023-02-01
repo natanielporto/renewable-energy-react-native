@@ -1,26 +1,26 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { colors } from "../../../global/colors";
+import { Text, View, TouchableOpacity } from "react-native";
+import * as S from "./styles";
 
-export const GraphBottomSelector = () => {
+interface GraphBottomSelectorProps {
+  selector: string;
+  btnSelected: boolean;
+}
+
+export const GraphBottomSelector: React.FC<GraphBottomSelectorProps> = ({
+  selector,
+  btnSelected,
+}) => {
+  console.log(
+    "🚀 ~ file: GraphBottomSelector.tsx:14 ~ btnSelected",
+    btnSelected
+  );
+  console.log("🚀 ~ file: GraphBottomSelector.tsx:14 ~ selector", selector);
   return (
-    <View>
-      <View style={styles.container}>
-        <Text style={styles.text}>1d</Text>
-      </View>
-    </View>
+    <TouchableOpacity>
+      <S.Container btnSelected={btnSelected}>
+        <S.Text>{selector}</S.Text>
+      </S.Container>
+    </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignSelf: "center",
-    padding: 8,
-    backgroundColor: colors.lightPurple,
-    borderRadius: 4,
-  },
-  text: {
-    fontSize: 15,
-    lineHeight: 19,
-  },
-});

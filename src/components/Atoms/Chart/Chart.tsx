@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import { View } from "react-native";
 import { VictoryArea } from "victory-native";
 import { colors } from "../../../global/colors";

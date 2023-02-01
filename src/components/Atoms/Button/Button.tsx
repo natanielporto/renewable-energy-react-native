@@ -4,7 +4,7 @@ interface ButtonProps {
   action: string;
   background?: "primary" | "secondary";
   bordered?: boolean;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({

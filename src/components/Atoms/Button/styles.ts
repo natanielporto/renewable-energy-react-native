@@ -12,6 +12,7 @@ export const Container = styled.TouchableOpacity<ButtonCSSProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 58px;
   border-radius: 4px;
   border: ${({ bordered }) => (bordered ? "1px solid" : "none")};
